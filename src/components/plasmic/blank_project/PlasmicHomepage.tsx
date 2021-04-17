@@ -37,9 +37,6 @@ import * as defaultcss from "../plasmic__default_style.module.css" // plasmic-im
 import * as projectcss from "./plasmic_blank_project.module.css" // plasmic-import: 9NGHBNkQsbfExpj8Yvxqtb/projectcss
 import * as sty from "./PlasmicHomepage.module.css" // plasmic-import: bizLmKQlykgG/css
 
-import Liogo1XsvgIcon from "./icons/PlasmicIcon__Liogo1Xsvg" // plasmic-import: c_1pCl59N/icon
-import LoupesvgIcon from "./icons/PlasmicIcon__Loupesvg" // plasmic-import: sY_IQ68AQ/icon
-
 export type PlasmicHomepage__VariantMembers = {}
 
 export type PlasmicHomepage__VariantsArgs = {}
@@ -56,9 +53,7 @@ export type PlasmicHomepage__OverridesType = {
   header?: p.Flex<"div">
   topBar?: p.Flex<"div">
   logo?: p.Flex<"a"> & Partial<LinkProps>
-  logoImg?: p.Flex<"svg">
   search?: p.Flex<"div">
-  svg?: p.Flex<"svg">
   menu?: p.Flex<"div">
   menuItem?: p.Flex<"a"> & Partial<LinkProps>
   menuItem2?: p.Flex<"a"> & Partial<LinkProps>
@@ -209,27 +204,13 @@ function PlasmicHomepage__RenderFunc(props: {
                   component={Link}
                   href={"/" as const}
                   platform={"gatsby"}
-                >
-                  <Liogo1XsvgIcon
-                    data-plasmic-name={"logoImg"}
-                    data-plasmic-override={overrides.logoImg}
-                    className={classNames(defaultcss.all, sty.logoImg)}
-                    role={"img"}
-                  />
-                </p.PlasmicLink>
+                />
 
                 <div
                   data-plasmic-name={"search"}
                   data-plasmic-override={overrides.search}
                   className={classNames(defaultcss.all, sty.search)}
-                >
-                  <LoupesvgIcon
-                    data-plasmic-name={"svg"}
-                    data-plasmic-override={overrides.svg}
-                    className={classNames(defaultcss.all, sty.svg)}
-                    role={"img"}
-                  />
-                </div>
+                />
               </div>
 
               <p.Stack
@@ -1373,9 +1354,7 @@ const PlasmicDescendants = {
     "header",
     "topBar",
     "logo",
-    "logoImg",
     "search",
-    "svg",
     "menu",
     "menuItem",
     "menuItem2",
@@ -1468,9 +1447,7 @@ const PlasmicDescendants = {
     "header",
     "topBar",
     "logo",
-    "logoImg",
     "search",
-    "svg",
     "menu",
     "menuItem",
     "menuItem2",
@@ -1562,9 +1539,7 @@ const PlasmicDescendants = {
     "header",
     "topBar",
     "logo",
-    "logoImg",
     "search",
-    "svg",
     "menu",
     "menuItem",
     "menuItem2",
@@ -1573,11 +1548,9 @@ const PlasmicDescendants = {
     "menuItem2222222",
     "menuItem22222222",
   ],
-  topBar: ["topBar", "logo", "logoImg", "search", "svg"],
-  logo: ["logo", "logoImg"],
-  logoImg: ["logoImg"],
-  search: ["search", "svg"],
-  svg: ["svg"],
+  topBar: ["topBar", "logo", "search"],
+  logo: ["logo"],
+  search: ["search"],
   menu: [
     "menu",
     "menuItem",
@@ -1935,9 +1908,7 @@ type NodeDefaultElementType = {
   header: "div"
   topBar: "div"
   logo: "a"
-  logoImg: "svg"
   search: "div"
-  svg: "svg"
   menu: "div"
   menuItem: "a"
   menuItem2: "a"
@@ -2085,9 +2056,7 @@ export const PlasmicHomepage = Object.assign(
     header: makeNodeComponent("header"),
     topBar: makeNodeComponent("topBar"),
     logo: makeNodeComponent("logo"),
-    logoImg: makeNodeComponent("logoImg"),
     search: makeNodeComponent("search"),
-    svg: makeNodeComponent("svg"),
     menu: makeNodeComponent("menu"),
     menuItem: makeNodeComponent("menuItem"),
     menuItem2: makeNodeComponent("menuItem2"),
